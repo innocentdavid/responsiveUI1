@@ -118,7 +118,7 @@ button:hover {
   width: 160px;
 }
 
-.col-1::after{
+.col-1::before{
   content: '';
   width: 10px;
   height: 57%;
@@ -173,13 +173,17 @@ button:hover {
   text-align: center;
 }
 
-@media only screen and (max-width: 767px) {
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
   nav ul {
     width: 100%;
     background: linear-gradient(#ff54a2, #ff575a);
     position: absolute;
     top: 75px;
-    right: 0;
+    left: 0;
     z-index: 2;
   }
   
@@ -202,7 +206,12 @@ button:hover {
   }
 
   .row {
+    margin-top: 90px;
     flex-direction: column-reverse;
     gap: 50px;
+  }
+
+  .color-box {
+    transform: translateX(80px) !important;
   }
 }
